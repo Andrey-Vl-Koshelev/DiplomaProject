@@ -22,6 +22,7 @@ from web import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('product/', include('product.urls')),
     # Auth
     path('signup/', views.signupuser, name='signupuser'),
     path('logout/', views.logoutuser, name='logoutuser'),
@@ -30,4 +31,5 @@ urlpatterns = [
     path('current/', views.currentweb, name='currentweb'),
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,17 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<div class="detail">
+    <img src="{{ product.image.url }}" alt="">
+    <h2>-- {{ product.date|date:'j E Y' }} --</h2>
+    <h1>{{ product.title }}</h1>
+    <h2 class="name">{{ product.name }}</h2>
+    <p>{{ product.new_price }} руб</p>
+    <p class="old_price">{{ product.old_price }} руб</p>
+    <p>Контакты для заказа</p>
+    <p>+7 (902) 296-07-09</p>
+    <a href="https://vk.com/id468504980">
+        <p>https://vk.com/id468504980</p>
+    </a>
+</div>
+{% endblock %}
