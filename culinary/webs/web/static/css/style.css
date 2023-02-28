@@ -16,7 +16,9 @@ body{
 .block img {
     border: 6px solid #FFF;
     text-align: center;
-    max-width: 380px;
+    width: 380px;
+    height: 700px;
+    object-fit: cover;
 }
 .img+h2,
 .text h2 {
@@ -75,13 +77,15 @@ ul{
     flex-wrap: wrap;
     justify-content:center;
     margin-bottom: 60px;
-    box-shadow:0 2px 12px 2px;
 }
 .element_product .top{
     border: 6px solid #FFF;
     text-align: center;
-    max-width: 380px;
+    width: 24%;
     font-weight: bold;
+}
+.top img{
+    width: 100%;
 }
 .price{
     color: red;
@@ -91,9 +95,18 @@ h1{
     text-align: center;
     font-size: 50px;
 }
+.detail{
+    width: 1430px;
+    margin: 4px;
+}
 .detail img{
     width: 400px;
     height: 400px;
+    display: block;
+    margin: 0 auto;
+    border: 6px solid #FFF;
+    text-align: center;
+    object-fit: cover;
 }
 .detail p{
     font-weight: bold;
@@ -106,6 +119,45 @@ h1{
 .name{
     font-size: 40px;
 }
-
+.favicon img{
+    width: 100px;
+    border-radius: 50%;
+}
+.form__field{
+    list-style: none;
+    background: var(--color-white);
+    padding: 10px 10px;
+    border: 2px solid var(--color-light);
+    border-radius: 5%;
+    font-size: 20px;
+    color: var(--color-sub);
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+.blocks{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 60px;
+    box-shadow: 0 2px 12px 2px #003366;
+    text-align: center;
+}
+.blocks .text{
+    font-weight: bold;
+}
+.avatar_blog{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.avatar_blog img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.avatar_blog h2 {
+    font-size: 60px;
+}
 
 

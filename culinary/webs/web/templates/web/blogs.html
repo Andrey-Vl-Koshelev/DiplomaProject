@@ -1,0 +1,20 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<div class="avatar_blog">
+    <a href="{% url 'product:products' %}">
+        <img src="{% static 'webs/aXmqO_6G_xc.jpg' %}" alt="">
+        <h2>Зефирные букеты от Коноваловой Натальи</h2>
+    </a>
+</div>
+<h1>Отзывы:</h1>
+<div class="element_block">
+        {% for blog in blogs %}
+        <div class="blocks">
+                <p>{{ blog.date }}</p>
+                <p>{{ blog.name }}</p>
+                <p class="text">{{ blog.description}}</p>
+        </div>
+        {% endfor %}
+</div>
+{% endblock %}

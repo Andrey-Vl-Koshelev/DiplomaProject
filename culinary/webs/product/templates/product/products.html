@@ -12,7 +12,9 @@
             </a>
                 <p>{{ product.name }}</p>
                 <p>{{ product.new_price }} руб</p>
+            {% if product.old_price %}
                 <p class="price">{{ product.old_price }} руб</p>
+            {% endif %}
         </div>
         {% endfor %}
     </div>

@@ -23,12 +23,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('product/', include('product.urls')),
-    # Auth
-    path('signup/', views.signupuser, name='signupuser'),
-    path('logout/', views.logoutuser, name='logoutuser'),
-    path('login/', views.loginuser, name='loginuser'),
     # webs
     path('current/', views.currentweb, name='currentweb'),
+    path('blog/', views.blogweb, name='blogweb'),
 ]
 
 if settings.DEBUG:

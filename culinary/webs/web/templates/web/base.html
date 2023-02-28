@@ -14,34 +14,20 @@
     </style>
 </head>
 <body>
-
-{% if user.is_authenticated %}
 <div class="menu">
     <div class="wrap">
         <ul>
-            <li><a href="logo">Пользователь: {{ user.username }}</a></li>
-            <li><a href="{% url 'currentweb' %}">Актуальные</a></li>
-            <li>
-                <form action="{% url 'logoutuser' %}" method="post">
-                    {% csrf_token %}
-                    <button class="top">Выйти</button>
-                </form>
-            </li>
-        </ul>
-    </div>
-</div>
-{% else %}
-<div class="menu">
-    <div class="wrap">
-        <ul>
+            <li class="favicon">
+                <a href="{% url 'index' %}">
+                    <img src="{% static 'webs/ORpXppLMk3E.jpg' %}" alt="">
+                </a></li>
             <li><a href="{% url 'index' %}">Фото</a></li>
             <li><a href="{% url 'product:products' %}">Товары</a></li>
-            <li><a href="{% url 'signupuser' %}">Зарегистрироваться</a></li>
-            <li><a href="{% url 'loginuser' %}">Оставить отзыв</a></li>
+            <li><a href="{% url 'currentweb' %}">Оставить отзыв</a></li>
+            <li><a href="{% url 'blogweb' %}">Отзывы</a></li>
         </ul>
     </div>
 </div>
-{% endif %}
 
 <div class="content">
     <div class="wrap">
