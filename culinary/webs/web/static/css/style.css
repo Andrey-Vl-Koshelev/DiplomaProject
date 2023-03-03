@@ -5,13 +5,17 @@ body{
     padding: 0;
     margin: 0;
     background:rgb(234, 234, 226);
-
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 .block{
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
     margin-bottom: 60px;
+    flex: 0 0 auto;
 }
 .block img {
     border: 6px solid #FFF;
@@ -40,6 +44,7 @@ body{
     margin: 0 auto;
     padding: 10px 30px;
     box-sizing: border-box;
+    flex: 1 0 auto;
 }
 .menu{
     background:rgb(234, 147, 33) ;
@@ -57,6 +62,35 @@ ul{
 }
 .menu a{
     color: #FFF;
+}
+.menu_bottom {
+    background:green;
+    box-shadow: 0 2px 12px 2px greenyellow;
+    margin-top: auto;
+}
+
+.menu_bottom ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+
+.menu_bottom a {
+    color: #FFF;
+}
+.menu_bottom li {
+    color: #FFF;
+}
+.wrap_bottom {
+    max-width: 1430px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+.content{
+    border: 1px;
 }
 .avatar{
     display: flex;
@@ -98,6 +132,7 @@ h1{
 .detail{
     width: 1430px;
     margin: 4px;
+    flex: 0 0 auto;
 }
 .detail img{
     width: 400px;
@@ -128,11 +163,16 @@ h1{
     background: var(--color-white);
     padding: 10px 10px;
     border: 2px solid var(--color-light);
-    border-radius: 5%;
+    border-radius: 10%;
     font-size: 20px;
     color: var(--color-sub);
     margin-bottom: 60px;
     margin-top: 30px;
+}
+.btn{
+    font-size: 20px;
+    margin-bottom: 60px;
+    font-weight: bold;
 }
 .blocks{
     display: block;
@@ -140,6 +180,7 @@ h1{
     margin-bottom: 60px;
     box-shadow: 0 2px 12px 2px #003366;
     text-align: center;
+    flex: 0 0 auto;
 }
 .blocks .text{
     font-weight: bold;

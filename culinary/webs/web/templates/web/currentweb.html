@@ -11,11 +11,12 @@
     {% csrf_token %}
     {% for field in form %}
     <div class="form__field">
-        <label for="formInput#text">{{ field.label }}</label>{{ field }}
+        <label for="formInput#text">{{ field.label }}</label>
+        {{ field }}
     </div>
     {% endfor %}
     <div class="center">
-        <button class="btn">Отправить</button>
+        <button class="btn">Отправить отзыв</button>
     </div>
 </form>
 {% endblock %}

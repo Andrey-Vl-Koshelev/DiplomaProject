@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect,get_object_or_404
+from django.shortcuts import render, redirect
 from .models import Web
 from .forms import WebForm
 from .models import Blog
@@ -24,6 +24,6 @@ def blogweb(request):
     blog = Blog.objects.order_by('-date')
     return render(request, 'web/blogs.html', {'blogs': blog})
 
-def blog(request, blog_id):
-    blogweb = get_object_or_404(Blog, pk=blog_id)
-    return render(request, 'web/currentweb.html', {'blogweb': blogweb})
+def blog(request, pk):
+    blogweb_obj = Blog.objects.get(Blog,id=pk)
+    return render(request, 'web/blogweb.html', {'blogweb': blogweb_obj})
