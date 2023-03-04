@@ -10,10 +10,10 @@
 <form class="bg" method="POST" >
     {% csrf_token %}
     {% for field in form %}
-    <div class="form__field">
-        <label for="formInput#text">{{ field.label }}</label>
-        {{ field }}
-    </div>
+        <div class="form__field">
+            <label for="formInput#text">{{ field.label }}</label>
+            {{ field }}
+        </div>
     {% endfor %}
     <div class="center">
         <button class="btn">Отправить отзыв</button>
