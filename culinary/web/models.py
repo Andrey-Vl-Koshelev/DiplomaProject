@@ -10,4 +10,6 @@ class Blog(models.Model):
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
+        if self.name == None:
+            return 'Пользователь'
         return self.name

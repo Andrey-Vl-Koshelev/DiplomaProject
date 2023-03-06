@@ -255,20 +255,22 @@ h1{
     font-size: 50px;
 }
 .detail{
-    line-height: 60px;
+    display: flex;
 }
-.detail img{
-    width: 400px;
-    height: 400px;
-    display: block;
-    margin: 30px auto;
+.detail_img{
+    width: 690px;
+    margin: 20px auto 20px auto;
     border: 6px solid #FFF;
-    text-align: center;
-    object-fit: cover;
 }
-.detail p{
+.detail_text {
+    width: 100%;
+    margin: 20px auto 20px auto;
     font-weight: bold;
     font-size: 30px;
+    text-align: center;
+}
+.detail_text h1{
+    margin: auto;
 }
 .old_price{
     color: red;
@@ -283,7 +285,9 @@ h1{
 }
 .favicon img:hover{
     transform: scale(1.1);
-    transition: 500ms linear;
+}
+.transition img{
+    transition: 500ms;
 }
 .form__field{
     padding: 10px 10px;
@@ -335,8 +339,8 @@ button:hover{
 }
 .avatar_blog img:hover{
     transform: scale(1.1);
-    transition: 500ms linear;
 }
+
 .avatar_blog h2 {
     font-size: 60px;
 }
