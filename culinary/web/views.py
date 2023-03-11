@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Web
 from .forms import WebForm
 from .models import Blog
+from django.contrib import messages
 
 
 def index(request):
