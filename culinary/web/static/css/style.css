@@ -329,7 +329,7 @@ button:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     text-align: center;
 }
 .avatar_blog img{
@@ -353,5 +353,14 @@ button:hover{
     box-shadow: 0 2px 12px 2px #003366;
     font-size: 30px;
 
+}
+.btn--sub {
+    background-color: green;
+}
+.container{
+    display: flex;
+}
+.container li{
+    margin: auto;
 }
 
