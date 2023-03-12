@@ -21,7 +21,7 @@
       <ul class="container">
 
         {% if blogs.has_previous %}
-        <li><a href="?page={{ blogs.previous_page_number }}" class="btn page-link">&lt; Назад</a></li>
+        <li><a href="?page={{ blogs.previous_page_number }}" class="btn page-link">&lt; Вперёд</a></li>
         {% endif %}
 
         {% for page in custom_range %}
@@ -33,7 +33,7 @@
         {% endfor %}
 
         {% if blogs.has_next %}
-        <li><a href="?page={{ blogs.next_page_number }}" class="btn page-link">Вперёд &gt;</a></li>
+        <li><a href="?page={{ blogs.next_page_number }}" class="btn page-link">Назад &gt;</a></li>
         {% endif %}
       </ul>
     </div>
