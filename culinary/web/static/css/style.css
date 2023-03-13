@@ -152,7 +152,6 @@ body{
     margin: 60px 0;
     font-size: 40px;
 }
-
 .img {
     padding: 10px 30px;
     margin-bottom: 40px;
@@ -253,6 +252,10 @@ ul{
 h1{
     text-align: center;
     font-size: 50px;
+}
+h3 {
+    text-align: center;
+    color: red;
 }
 .detail{
     display: flex;

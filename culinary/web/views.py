@@ -3,6 +3,11 @@ from .models import Web
 from .forms import WebForm
 from .models import Blog
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.contrib.auth.models import User
+from django.contrib import messages
+from django.core.exceptions import ObjectDoesNotExist
+from django.db import IntegrityError
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 
 def index(request):
@@ -12,13 +17,18 @@ def index(request):
 
 def currentweb(request):
     form = WebForm()
-    if request.method == 'POST':
-        form = WebForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('blogweb')
-    context = {'form': form}
-    return render(request, 'web/currentweb.html', context)
+    if request.method == 'GET':
+        return render(request, 'web/currentweb.html', {'form': form})
+    else:
+        if request.method == 'POST':
+            form = WebForm(request.POST, request.FILES)
+            user = form.save(commit=False)
+            if user.name is not None:
+                user.save()
+                return redirect('blogweb')
+            else:
+                context = {'form': form, 'error': 'Заполните все поля.'}
+                return render(request, 'web/currentweb.html', context)
 
 
 def blogweb(request):
@@ -55,6 +65,7 @@ def blogweb(request):
 
     return render(request, 'web/blogs.html', context)
 
+
 def blog(request, pk):
-    blogweb_obj = Blog.objects.get(Blog,id=pk)
+    blogweb_obj = Blog.objects.get(Blog, id=pk)
     return render(request, 'web/blogweb.html', {'blogweb': blogweb_obj})
