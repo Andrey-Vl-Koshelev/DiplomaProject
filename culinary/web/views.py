@@ -3,11 +3,7 @@ from .models import Web
 from .forms import WebForm
 from .models import Blog
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-from django.contrib.auth.models import User
-from django.contrib import messages
-from django.core.exceptions import ObjectDoesNotExist
-from django.db import IntegrityError
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+
 
 
 def index(request):
@@ -21,7 +17,7 @@ def currentweb(request):
         return render(request, 'web/currentweb.html', {'form': form})
     else:
         if request.method == 'POST':
-            form = WebForm(request.POST, request.FILES)
+            form = WebForm(request.POST)
             user = form.save(commit=False)
             if user.name is not None:
                 user.save()
@@ -29,6 +25,7 @@ def currentweb(request):
             else:
                 context = {'form': form, 'error': 'Заполните все поля.'}
                 return render(request, 'web/currentweb.html', context)
+
 
 
 def blogweb(request):

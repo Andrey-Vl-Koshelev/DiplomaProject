@@ -5,6 +5,10 @@ class WebForm(ModelForm):
     class Meta:
         model = Blog
         fields = ['name', 'text']
+        labels = {
+            'name': 'Ваше имя',
+            'text': 'Текст отзыва'
+        }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
