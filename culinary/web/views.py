@@ -23,7 +23,7 @@ def currentweb(request):
                 user.save()
                 return redirect('blogweb')
             else:
-                context = {'form': form, 'error': 'Заполните все поля.'}
+                context = {'form': form, 'error': 'Заполните все поля'}
                 return render(request, 'web/currentweb.html', context)
 
 

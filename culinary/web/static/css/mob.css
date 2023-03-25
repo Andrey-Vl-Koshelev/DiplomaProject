@@ -2,11 +2,24 @@
 .img {
     display: none;
 }
+.menu ul {
+    font-size: 40px;
+}
+
+.element_product .top {
+    font-size: 30px;
+}
 }
 
 @media only screen and (max-width:768px) {
     .img {
         display: none;
+    }
+    .menu ul {
+        font-size: 40px;
+    }
+    .element_product .top {
+        font-size: 30px;
     }
 }
 
@@ -14,16 +27,34 @@
     .img {
         display: none;
     }
+    .menu ul {
+        font-size: 40px;
+    }
+    .element_product .top {
+        font-size: 30px;
+    }
 }
 
 @media only screen and (max-width:375px) {
     .img {
         display: none;
     }
+    .menu ul {
+        font-size: 40px;
+    }
+    .element_product .top {
+        font-size: 30px;
+    }
 }
 
 @media only screen and (max-width:320px) {
     .img {
         display: none;
+    }
+    .menu ul {
+        font-size: 40px;
+    }
+    .element_product .top {
+        font-size: 30px;
     }
 } 

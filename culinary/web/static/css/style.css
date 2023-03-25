@@ -256,6 +256,7 @@ h1{
 h3 {
     text-align: center;
     color: red;
+    font-size: 25px;
 }
 .detail{
     display: flex;
@@ -294,10 +295,12 @@ h3 {
 }
 .form__field{
     padding: 10px 10px;
-    font-size: 20px;
-    margin-bottom: 60px;
-    margin-top: 60px;
-    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: bold;
 }
 .btn{
     font-size: 30px;
@@ -347,7 +350,7 @@ button:hover{
 .avatar_blog h2 {
     font-size: 60px;
 }
-.input{
+/* .input{
     width: 75% !important;
     padding: 20px;
     box-sizing:border-box;
@@ -356,7 +359,7 @@ button:hover{
     box-shadow: 0 2px 12px 2px #003366;
     font-size: 30px;
 
-}
+} */
 .btn--sub {
     background-color: green;
 }
@@ -366,4 +369,5 @@ button:hover{
 .container li{
     margin: auto;
 }
+
 
