@@ -120,6 +120,7 @@ ul{
 }
 .top img{
     width: 100%;
+    height: 78%;
 }
 .price{
     color: red;
@@ -148,6 +149,11 @@ h3 {
     font-weight: bold;
     font-size: 30px;
     text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.detail_text a{
+    word-break: break-all;
 }
 .detail_text h1{
     margin: auto;
@@ -234,6 +240,10 @@ button:hover{
 }
 .container li{
     margin: auto;
+}
+.product{
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 

@@ -2,13 +2,15 @@
     .img {
         display: none;
     }
-
     .menu ul {
         font-size: 40px;
     }
-
-    .element_product .top {
-        font-size: 30px;
+    .top img {
+        height: 60%;
+    }
+    .product {
+        font-size: 25px;
+        line-height: 30px;
     }
 }
 
@@ -16,13 +18,15 @@
     .img {
         display: none;
     }
-
     .menu ul {
         font-size: 40px;
     }
-
-    .element_product .top {
-        font-size: 30px;
+    .top img {
+        height: 60%;
+    }
+    .product {
+        font-size: 25px;
+        line-height: 30px;
     }
 }
 
@@ -30,13 +34,15 @@
     .img {
         display: none;
     }
-
     .menu ul {
         font-size: 40px;
     }
-
-    .element_product .top {
-        font-size: 30px;
+    .top img {
+        height: 60%;
+    }
+    .product {
+        font-size: 25px;
+        line-height: 30px;
     }
 }
 
@@ -44,13 +50,15 @@
     .img {
         display: none;
     }
-
     .menu ul {
         font-size: 40px;
     }
-
-    .element_product .top {
-        font-size: 30px;
+    .top img {
+        height: 60%;
+    }
+    .product {
+        font-size: 25px;
+        line-height: 30px;
     }
 }
 
@@ -58,12 +66,14 @@
     .img {
         display: none;
     }
-
     .menu ul {
         font-size: 40px;
     }
-
-    .element_product .top {
-        font-size: 30px;
+    .top img {
+        height: 60%;
+    }
+    .product {
+        font-size: 25px;
+        line-height: 30px;
     }
 }

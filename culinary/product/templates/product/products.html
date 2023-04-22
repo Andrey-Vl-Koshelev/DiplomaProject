@@ -10,11 +10,13 @@
             <a href="{% url 'product:detail' product.id %}">
                 <img src="{{ product.image.url }}" alt="">
             </a>
+            <div class="product">
                 <p>{{ product.name }}</p>
                 <p>{{ product.new_price }} руб</p>
-            {% if product.old_price %}
-                <p class="price">{{ product.old_price }} руб</p>
-            {% endif %}
+                {% if product.old_price %}
+                    <p class="price">{{ product.old_price }} руб</p>
+                {% endif %}
+            </div>
         </div>
         {% endfor %}
     </div>
